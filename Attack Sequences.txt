@@ -1,0 +1,3269 @@
+Linux Attack Sequence:
+/usr/bin/payload writes /tmp/malicious_software
+
+/usr/bin/payload executes /tmp/malicious_software
+
+/usr/bin/payload connects *.*.*.*
+
+/usr/bin/payload reads /etc/scada/config.conf
+
+/usr/bin/payload writes /dev/ttyS0
+
+/usr/bin/payload renames /etc/scada/pump_station_14.conf to /etc/scada/pump_station_3.conf
+
+/usr/bin/payload deletes /var/log/scada/system.log
+
+Windows Attack Sequence:
+C:\Windows\System32\payload.exe writes C:\Users\Public\malicious_software.exe
+
+C:\Windows\System32\payload.exe executes C:\Users\Public\malicious_software.exe
+
+C:\Windows\System32\payload.exe connects *.*.*.*
+
+C:\Windows\System32\payload.exe reads C:\Program Files\SCADA\config.ini
+
+C:\Windows\System32\payload.exe renames C:\Program Files\SCADA\pump_station_14.ini to C:\Program Files\SCADA\pump_station_3.ini
+
+C:\Windows\System32\payload.exe deletes C:\Program Files\SCADA\system_log.txt
+
+Linux Attack Sequence:
+payload writes /tmp/malware
+
+payload reads /etc/passwd
+
+bash executes /tmp/malware
+
+curl connects to *.*.*.*
+
+rm deletes /var/log/syslog
+
+mv renames /tmp/malware to /tmp/legit
+
+cp clones /tmp/malware to /var/tmp/malware
+
+sendmail sends email with malicious attachment
+
+touch creates /tmp/malicious_app
+
+sed modifies /etc/hosts
+
+cat reads /etc/shadow
+
+dd overwrites /dev/sda1
+
+gpg reads /home/user/important_file
+
+scp connect user@remote:/tmp/malware
+
+Windows Attack Sequence:
+payload.exe writes C:\Users\*\writes\malware.exe
+
+powershell.exe reads C:\Windows\System32\drivers\etc\hosts
+
+powershell.exe executes C:\Users\*\writes\malware.exe
+
+curl.exe connects to *.*.*.*
+
+del deletes C:\Windows\System32\LogFiles\*
+
+ren renames C:\Users\*\writes\malware.exe to C:\Users\*\writes\legit.exe
+
+copy clones C:\Users\*\writes\malware.exe to C:\Windows\Temp\malware.exe
+
+outlook.exe sends email with malicious attachment
+
+mkdir creates C:\Users\*\AppData\Local\malicious_app
+
+notepad.exe modifies C:\Windows\System32\drivers\etc\hosts
+
+powershell.exe reads C:\Windows\System32\config\SAM
+
+powershell.exe overwrites C:\Windows\System32\*
+
+powershell.exe reads C:\Users\*\Documents\important_file
+
+powershell.exe sends remote\C$\malware.exe
+
+
+Linux Attack Sequence:
+apache reads /var/www/html/shell.jsp.
+
+bash executes /tmp/recon.sh.
+
+bash reads /etc/passwd.
+
+bash executes /tmp/xserver.
+
+bash connects to 192.168.*.*.
+
+payload writes /tmp/mimikatz.
+
+payload modifies /etc/shadow.
+
+payload writes /tmp/data.tar.gz.
+
+payload connects to *.*.*.*
+
+payload creates /etc/cron.d/payload.
+
+payload modifies /etc/systemd/system/payload.service.
+
+payload deletes /var/log/auth.log.
+
+payload writes /tmp/obfuscated.sh.
+
+Windows Attack Sequence:
+w3wp.exe reads C:\inetpub\wwwroot\shell.aspx.
+
+powershell executes C:\Windows\Temp\recon.vbs.
+
+powershell reads C:\Windows\System32\config\SAM.
+
+powershell executes C:\Windows\Temp\xserver.exe.
+
+powershell connects to 192.168.*.*.
+
+Payload writes C:\Windows\Temp\mimikatz.exe.
+
+payload modifies HKLM\SYSTEM\CurrentControlSet\Control\Lsa.
+
+payload writes C:\Windows\Temp\data.rar.
+
+payload writes C:\Windows\Temp\exfil.rar to external IP address.
+
+payload creates scheduled task schtasks /create /tn payload /tr C:\Windows\Temp\payload.exe.
+
+payload modifies system service sc create payload binPath= C:\Windows\Temp\payload.exe.
+
+payload deletes logs wevtutil cl system.
+
+payload writes C:\Windows\Temp\obfuscated.exe.
+
+
+Linux Attack Sequence:
+payload writes /home/*/DSLogConfig.pm
+
+payload writes /home/*/sql/dsserver/sessionserver.pl
+
+payload writes /home/*/sql/dsserver/sessionserver.sh
+
+payload writes /home/*/htdocs/dana-na/auth/compcheckresult.cgi
+
+payload writes /home/*/htdocs/dana-na/auth/lastauthorserversused.js
+
+payload executes sessionserver.pl
+
+payload connects *.*.*.*
+
+payload deletes /tmp/*
+
+payload reads /path/to/ntds.dit
+
+payload executes GLASSTOKEN
+
+payload writes /path/to/visits.py
+
+Windows Attack Sequence:
+payload writes C:\path\to\DSLogConfig.pm
+
+payload writes C:\path\to\sessionserver.pl
+
+payload writes C:\path\to\sessionserver.sh
+
+payload writes C:\path\to\compcheckresult.cgi
+
+payload writes C:\path\to\lastauthorserversused.js
+
+payload executes sessionserver.pl
+
+payload connects *.*.*.*
+
+payload deletes C:\path\to\tmp\*
+
+payload reads C:\path\to\ntds.dit
+
+payload executes GLASSTOKEN
+
+payload writes C:\path\to\visits.py
+
+
+Linux Attack Sequence:
+Firefox writes /home/*/writes/ds7002.zip.
+
+Firefox reads /home/*/writes/ds7002.zip.
+
+Firefox writes /home/*/writes/ds7002.sh.
+
+Bash executes /home/*/writes/ds7002.sh.
+
+Shell script executes /bin/bash.
+
+Bash writes /home/*/.local/lib/cyzfc.so.
+
+Bash executes /home/*/.local/lib/cyzfc.so.
+
+cyzfc.so connects to *.*.*.*.
+
+cyzfc.so writes /home/*/.local/lib/payload.
+
+Cobalt Strike executes payload.
+
+Meterpreter connects to *.*.*.*.
+
+Windows Attack Sequence:
+Firefox writes C:\Users\*\writes\ds7002.zip.
+
+Firefox reads C:\Users\*\writes\ds7002.zip.
+
+Firefox writes C:\Users\*\writes\ds7002.lnk.
+
+Explorer executes C:\Users\*\writes\ds7002.lnk.
+
+LNK executes powershell.exe.
+
+PowerShell writes C:\Users\*\AppData\Local\cyzfc.dat.
+
+PowerShell executes rundll32.exe C:\Users\*\AppData\Local\cyzfc.dat.
+
+cyzfc.dat connects to *.*.*.*.
+
+cyzfc.dat writes C:\Users\*\AppData\Local\payload.
+
+Cobalt Strike executes payload.
+
+Meterpreter connects to *.*.*.*.
+
+
+Linux System:
+apache2 writes /tmp/malware
+
+apache2 executes payload
+
+payload connects *.*.*.*
+
+payload writes /tmp/malware.so
+
+payload executes beacon
+
+beacon connects *.*.*.*
+
+payload reads /var/lib/database.db
+
+payload writes /tmp/exfiltrated_data.csv
+
+payload reads /tmp/exfiltrated_data.csv
+
+payload deletes /tmp/exfiltrated_data.csv
+
+payload renames /tmp/malware.so to /tmp/legit.so
+
+payload executes additional_payload
+
+additional_payload connects *.*.*.*
+
+additional_payload writes /tmp/malware2.so
+
+additional_payload executes beacon2
+
+beacon2 connects *.*.*.*
+
+Windows System:
+w3wp.exe writes C:\ProgramData\malware.exe
+
+w3wp.exe executes payload
+
+payload connects *.*.*.*
+
+payload writes C:\ProgramData\malware.dll
+
+payload executes beacon.exe
+
+beacon.exe connects *.*.*.*
+
+payload reads C:\ProgramData\database.db
+
+payload writes C:\ProgramData\exfiltrated_data.csv
+
+payload reads C:\ProgramData\exfiltrated_data.csv
+
+payload deletes C:\ProgramData\exfiltrated_data.csv
+
+payload renames C:\ProgramData\malware.dll to C:\ProgramData\legit.dll
+
+payload executes additional_payload
+
+additional_payload connects *.*.*.*
+
+additional_payload writes C:\ProgramData\malware2.dll
+
+additional_payload executes beacon2.exe
+
+beacon2.exe connects *.*.*.*
+
+Linux:
+payload writes /usr/bin/trilog
+
+payload reads /usr/bin/trilog
+
+payload executes /usr/bin/trilog
+
+trilog connects to *.*.*.*
+
+trilog reads /usr/bin/inject.bin
+
+trilog writes inject.bin 
+
+trilog executes inject.bin 
+
+trilog deletes inject.bin 
+
+Windows:
+payload writes C:\Program Files\Triconex\Trilog\trilog.exe
+
+payload reads C:\Program Files\Triconex\Trilog\trilog.exe
+
+payload executes C:\Program Files\Triconex\Trilog\trilog.exe
+
+trilog.exe connects to *.*.*.*
+
+trilog.exe reads C:\Program Files\Triconex\Trilog\inject.bin
+
+trilog.exe writes inject.bin
+
+trilog.exe executes inject.bin
+
+trilog.exe deletes inject.bin
+
+Linux Attack Sequence:
+gateway connects *.*.*.*
+
+gateway executes payload
+
+payload writes /tmp/watcher
+
+payload executes watcher
+
+payload connects *.*.*.*
+
+payload writes /tmp/vmware_kb
+
+payload executes vmware_kb
+
+payload writes /tmp/IIS_Temporary_Compressed_Files.zip
+
+payload executes scanner
+
+payload modifies /etc/*
+
+payload writes /tmp/AvosLocker
+
+payload executes AvosLocker
+
+AvosLocker encrypts /home/*/Documents/*
+
+AvosLocker writes /home/*/Desktop/ransom_note.txt
+
+Windows Attack Sequence:
+wmiprvse.exe connects *.*.*.*
+
+wmiprvse.exe executes payload
+
+payload writes C:\Windows\System32\temp\watcher.exe
+
+payload executes watcher.exe
+
+payload connects *.*.*.*
+
+payload writes C:\Windows\System32\temp\vmware_kb.exe
+
+payload executes vmware_kb.exe
+
+payload writes C:\Windows\System32\temp\IIS Temporary Compressed Files.zip
+
+payload executes scanner.exe
+
+payload modifies C:\Windows\System32\*
+
+payload writes C:\Windows\System32\temp\AvosLocker.exe
+
+payload executes AvosLocker.exe
+
+AvosLocker.exe reads C:\Users\*\Documents\*
+
+AvosLocker.exe writes C:\Users\*\Desktop\ransom_note.txt
+
+Linux Attack Sequence
+payload writes ccf32.
+
+payload executes ccf32.
+
+ccf32 reads *.doc, *.docx, *.ppt, *.pptx, *.xls, *.xlsx, *.pdf.
+
+ccf32 writes *.tar.gz.
+
+ccf32 deletes *.tmp.
+
+payload connects to *.*.*.*.
+
+payload writes payload.so.
+
+payload connects to *.*.*.*.
+
+payload writes payload.so.
+
+payload executes payload.so.
+
+payload writes ccf32.
+
+payload executes ccf32.
+
+payload connects to *.*.*.*.
+
+filepak writes collected files to *.tar.gz.
+
+filepak deletes *.tmp.
+
+screencap writes to *.tar.gz.
+
+keyrecord writes to *.tar.gz.
+
+filepakmonitor writes to *.tar.gz.
+
+filepakmonitor connects to *.*.*.*.
+
+tcpbridge connects to *.*.*.*.
+
+tcptransfer connects to *.*.*.*.
+
+mdclient connects to *.*.*.*.
+
+Windows Attack Sequence
+payload writes ccf32.exe.
+
+payload executes ccf32.exe.
+
+ccf32.exe reads *.doc, *.docx, *.ppt, *.pptx, *.xls, *.xlsx, *.pdf.
+
+ccf32.exe writes collected files to *.7z.
+
+ccf32.exe deletes *.tmp.
+
+payload connects to *.*.*.*.
+
+payload.exe writes payload.dll.
+
+payload connects to *.*.*.*.
+
+payload.exe writes payload.dll.
+
+payload.exe executes payload.dll.
+
+payload writes ccf32.exe.
+
+payload executes ccf32.exe.
+
+payload connects to *.*.*.*.
+
+filepak.exe writes *.7z.
+
+filepak.exe deletes *.tmp.
+
+screencap writes *.7z.
+
+keyrecord writes *.7z.
+
+filepakmonitor writes *.7z.
+
+filepakmonitor connects to *.*.*.*.
+
+tcpbridge.exe connects to *.*.*.*.
+
+tcptransfer.exe connects to *.*.*.*.
+
+mdclient.exe connects to *.*.*.*.
+
+Linux System:
+nginx writes /var/www/html/*.exe.
+
+firefox reads /tmp/*.exe.
+
+bash executes /tmp/*.exe.
+
+payload writes /usr/bin/legit_setup, /usr/bin/launcher, /usr/bin/exfiltration, and /usr/bin/file_searcher.
+
+launcher executes /usr/bin/exfiltration.
+
+exfiltration connects to *.*.*.*.
+
+exfiltration reads /usr/bin/file_searcher.
+
+file_searcher reads /home//Documents/.doc.
+
+file_searcher writes /tmp/temp_archive.zip.
+
+file_searcher writes /tmp/*.sft.
+
+exfiltration reads /tmp/*.sft.
+
+exfiltration connects to  *.*.*.*.
+
+exfiltration deletes /tmp/*.sft.
+
+Windows System:
+IIS writes C:\inetpub\wwwroot*.exe.
+
+chrome reads C:\Users*\writes*.exe.
+
+explorer executes C:\Users*\writes*.exe.
+
+payload writes C:\Windows\System32\legit_setup.exe, C:\Windows\System32\launcher.exe, C:\Windows\System32\exfiltration.exe, and C:\Windows\System32\file_searcher.exe.
+
+launcher executes C:\Windows\System32\exfiltration.exe.
+
+exfiltration connects to *.*.*.*.
+
+exfiltration reads C:\Windows\System32\file_searcher.exe.
+
+file_searcher reads C:\Users*\Documents*.doc.
+
+file_searcher writes C:\Users*\AppData\Local\Temp\temp_archive.zip.
+
+file_searcher writes C:\Users*\AppData\Local\Temp*.sft.
+
+exfiltration reads C:\Users*\AppData\Local\Temp*.sft.
+
+exfiltration connects to *.*.*.*.
+
+exfiltration deletes C:\Users*\AppData\Local\Temp*.sft.
+
+Linux System:
+Thunderbird writes*.pdf .
+
+unzip writes *.sh.
+
+bash executes *.sh.
+
+payload executes *.so.
+
+payload connects to  *.*.*.*.
+
+payload executes whoami and ifconfig.
+
+payload sends *.json.
+
+payload writes *.so.
+
+Windows System:
+Outlook.exe writes *.pdf or *.zip.
+
+WinRAR.exe writes *.lnk.
+
+Explorer.exe executes *.lnk.
+
+rundll32.exe executes *.dll.
+
+payload.exe connects to *.*.*.*.
+
+payload.exe executes whoami.exe and ipconfig.exe.
+
+payload.exe sends *.json.
+
+payload.exe writes *.dll.
+
+
+Linux System:
+libreoffice writes payload.hta
+
+hta-interpreter executes payload.so
+
+payload.so connects *.*.*.*
+
+payload.so clones systemd
+
+systemd executes /bin/bash
+
+payload writes *.txt
+
+payload executes locker.sh
+
+locker writes *.encrypted
+
+Windows System:
+winword.exe writes payload.hta
+
+mshta.exe executes payload.dll
+
+payload.dll connects *.*.*.*
+
+payload.dll clones winlogon.exe
+
+winlogon.exe executes cmd.exe
+
+payload.exe writes *.txt
+
+payload.exe executes locker.bat
+
+locker.exe writes *.encrypted
+
+Linux Attack Sequence:
+bash executes payload
+
+bash deletes /etc/*.conf
+
+bash writes /dev/relay*
+
+bash reads /dev/transmission*
+
+bash connects to *.*.*.*
+
+bash deletes /dev/relay*
+
+bash executes payload
+
+Windows Attack Sequence:
+powershell executes payload
+
+powershell deletes C:\ProgramData\*.conf
+
+powershell writes C:\Windows\System32\relay*
+
+powershell reads C:\Windows\System32\transmission*
+
+powershell connects to *.*.*.*
+
+powershell deletes C:\Windows\System32\relay*
+
+powershell executes payload
+
+Linux:
+payload writes .pcmp
+
+payload writes .pcmi
+
+payload writes .pcmt
+
+payload writes .CIN
+
+payload writes .PL
+
+payload writes .paf
+
+payload writes .SCL
+
+payload writes .cid
+
+payload writes .scd
+
+payload reads .pcmp
+
+payload reads .pcmi
+
+payload reads .pcmt
+
+payload reads .CIN
+
+payload reads .PL
+
+payload reads .paf
+
+payload reads .SCL
+
+payload reads .cid
+
+payload reads .scd
+
+payload executes defragsvc
+
+payload connects ..*.
+
+payload deletes .pcmp
+
+payload deletes .pcmi
+
+payload deletes .pcmt
+
+payload deletes .CIN
+
+payload deletes .PL
+
+payload deletes .paf
+
+payload deletes .SCL
+
+payload deletes .cid
+
+payload deletes .scd
+
+payload writes /home/*/
+
+payload reads /home/*/
+
+payload deletes /home/*/
+
+payload writes /etc/systemd/system/*
+
+payload reads /etc/systemd/system/*
+
+payload deletes /etc/systemd/system/*
+
+payload executes payload.so
+
+payload executes 104.so
+
+payload executes haslo
+
+payload executes 61850
+
+payload executes opc
+
+Windows:
+payload writes .pcmp
+
+payload writes .pcmi
+
+payload writes .pcmt
+
+payload writes .CIN
+
+payload writes .PL
+
+payload writes .paf
+
+payload writes .SCL
+
+payload writes .cid
+
+payload writes .scd
+
+payload reads .pcmp
+
+payload reads .pcmi
+
+payload reads .pcmt
+
+payload reads .CIN
+
+payload reads .PL
+
+payload reads .paf
+
+payload reads .SCL
+
+payload reads .cid
+
+payload reads .scd
+
+payload executes defragsvc
+
+payload connects ..*.
+
+payload deletes .pcmp
+
+payload deletes .pcmi
+
+payload deletes .pcmt
+
+payload deletes .CIN
+
+payload deletes .PL
+
+payload deletes .paf
+
+payload deletes .SCL
+
+payload deletes .cid
+
+payload deletes .scd
+
+payload writes C:\Users**
+
+payload reads C:\Users**
+
+payload deletes C:\Users**
+
+payload writes HKLMSYSTEM\CurrentControlSet\Services*
+
+payload reads HKLMSYSTEM\CurrentControlSet\Services*
+
+payload deletes HKLMSYSTEM\CurrentControlSet\Services*
+
+payload executes payload.dll
+
+payload executes 104.dll
+
+payload executes haslo.exe
+
+payload executes 61850.exe
+
+payload executes opc.exe
+
+
+Linux Attack Sequence:
+payload write *.so
+
+payload write *.sh
+
+payload write *.conf
+
+payload write *.dat
+
+payload read *.so
+
+payload read *.sh
+
+payload read *.conf
+
+payload read *.dat
+
+payload clone bash
+
+payload clone sshd
+
+payload execute *.sh
+
+payload execute *.so
+
+payload execute *.conf
+
+payload connect *.*.*.*
+
+payload rename *.txt to *.sh
+
+payload rename *.so to *.bak
+
+payload delete *.so
+
+payload delete *.sh
+
+payload delete *.conf
+
+payload delete *.dat
+
+payload delete *.bak
+
+Windows Attack Sequence:
+payload write *.dll
+
+payload write *.exe
+
+payload write *.ini
+
+payload write *.dat
+
+payload read *.dll
+
+payload read *.exe
+
+payload read *.ini
+
+payload read *.dat
+
+payload clone svchost.exe
+
+payload clone sqlservr.exe
+
+payload execute *.exe
+
+payload execute *.dll
+
+payload execute *.vbs
+
+payload execute *.bat
+
+payload connect *.*.*.*
+
+payload rename *.txt to *.exe
+
+payload rename *.dll to *.bak
+
+payload delete *.dll
+
+payload delete *.exe
+
+payload delete *.ini
+
+payload delete *.dat
+
+payload delete *.bak
+
+Linux:
+payload write /tmp/FunnyDream_*
+
+payload connect *.*.*.*
+
+payload execute /tmp/FunnyDream_*
+
+payload write /tmp/ShadowPad_*
+
+payload connect *.*.*.*
+
+payload execute /tmp/ShadowPad_*
+
+payload write /tmp/ShadowPad_*
+
+payload connect *.*.*.*
+
+payload execute /tmp/ShadowPad_*
+
+Windows:
+payload write C:\Windows\Temp\FunnyDream_*
+
+payload connect *.*.*.*
+
+payload execute C:\Windows\Temp\FunnyDream_*
+
+payload write C:\Windows\Temp\ShadowPad_*
+
+payload connect *.*.*.*
+
+payload execute C:\Windows\Temp\ShadowPad_*
+
+payload write C:\Windows\Temp\ShadowPad_*
+
+payload connect *.*.*.*
+
+payload execute C:\Windows\Temp\ShadowPad_*
+
+Linux Attack Sequence:
+httpd writes BUSHWALK /home/webserver/cgi-bin/querymanifest.cgi
+
+httpd executes BUSHWALK
+
+httpd writes arbitrary files BUSHWALK
+
+httpd writes LIGHTWIRE /home/webserver/cgi-bin/compcheckresult.cgi
+
+httpd executes LIGHTWIRE
+
+httpd writes CHAINLINE /home/venv3/lib/python3.6/site-packages/cav-0.1-py3.6.egg/cav/api/resources/health.py
+
+httpd executes CHAINLINE
+
+httpd writes FRAMESTING /home/venv3/lib/python3.6/site-packages/cav-0.1-py3.6.egg/cav/api/resources/category.py
+
+httpd executes FRAMESTING
+
+httpd connects WARPWIRE C2
+
+httpd writes Base64-encoded Python script /tmp/tools
+
+httpd executes patched dsls binary
+
+httpd deletes /tmp/tools
+
+httpd writes tar archive /home/webserver/htdocs/dana-na/css/*.css
+
+httpd deletes /tmp/test1.txt
+
+httpd deletes /home/webserver/htdocs/dana-na/css/*.css
+
+httpd writes Base64-encoded CAV web server logs /home/webserver/htdocs/dana-na/help/logo.gif
+
+httpd modifies internal ICT manifest file /home/etc/manifest
+
+httpd disables scanner execution /home/venv3/lib/python3.6/site-packages/scanner-0.1-py3.6.egg/scammgr.py
+
+Windows Attack Sequence:
+w3wp writes BUSHWALK C:\inetpub\wwwroot\cgi-bin\querymanifest.cgi
+
+w3wp executes BUSHWALK
+
+w3wp writes arbitrary files BUSHWALK
+
+w3wp writes LIGHTWIRE C:\inetpub\wwwroot\cgi-bin\compcheckresult.cgi
+
+w3wp executes LIGHTWIRE
+
+w3wp writes CHAINLINE C:\Program Files\Python36\Lib\site-packages\cav-0.1-py3.6.egg\cav\api\resources\health.py
+
+w3wp executes CHAINLINE
+
+w3wp writes FRAMESTING C:\Program Files\Python36\Lib\site-packages\cav-0.1-py3.6.egg\cav\api\resources\category.py
+
+w3wp executes FRAMESTING
+
+w3wp connects WARPWIRE C2
+
+w3wp writes Base64-encoded Python script C:\Temp\tools
+
+w3wp executes patched dsls binary
+
+w3wp deletes C:\Temp\tools
+
+w3wp writes tar archive C:\inetpub\wwwroot\dana-na\css*.css
+
+w3wp deletes C:\Temp\test1.txt
+
+w3wp deletes C:\inetpub\wwwroot\dana-na\css*.css
+
+w3wp writes Base64-encoded CAV web server logs C:\inetpub\wwwroot\dana-na\help\logo.gif
+
+w3wp modifies internal ICT manifest file C:\etc\manifest
+
+w3wp disables scanner execution C:\Program Files\Python36\Lib\site-packages\scanner-0.1-py3.6.egg\scammgr.py
+
+Linux Attack Sequence:
+httpd writes libaprhelper.so to /tmp/clientswrite.sock.
+
+httpd reads /home/webserver/conf/ssl.key/secure.key.
+
+httpd executes libaprhelper.so.
+
+httpd connects to *.*.*.*.
+
+httpd renames /tmp/tmpmnt/bin/tar to /tmp/tmpmnt/bin/tra.
+
+httpd writes trojanized tar to /tmp/tmpmnt/bin/tar.
+
+httpd executes /bin/samba_upgrade.tar.
+
+httpd reads /proc/ive/mbserialnumber.
+
+httpd writes plugin.jar to /home/runtime/SparkGateway/plugin.jar.
+
+httpd executes libchilkat.so.
+
+httpd reads /data/pkg/data-backup.tgz.
+
+httpd writes malicious components to /data/pkg/data-backup.tgz.
+
+httpd executes upgrade_monitor().
+
+httpd reads /tmp/data/root/dev.
+
+httpd writes malicious components to /tmp/data/root/samba_upgrade.tar.
+
+httpd executes post-install script.
+
+httpd reads /data/runtime/cockpit/mem.rd.
+
+httpd executes memorysCounter.
+
+httpd writes mem.rd to /data/runtime/cockpit/mem.rd.
+
+httpd executes dsAgent.
+
+httpd reads /data/runtime/cockpit/wd.fd.
+
+httpd writes wd.lock to /data/runtime/cockpit/wd.lock.
+
+httpd executes SparkPlugin.watchdog().
+
+httpd reads /proc/self/maps.
+
+httpd writes security.jar to /data/runtime/cockpit/security.jar.
+
+httpd executes HandshakePlugin.
+
+httpd reads /data/runtime/cockpit/gateway.conf.
+
+httpd writes modified gateway.conf to /data/runtime/cockpit/gateway.conf.
+
+httpd executes SparkGatewayFilter.
+
+httpd reads /home/etc/manifest/exclusion_list.
+
+httpd writes querymanifest.cgi to /home/webserver/htdocs/dana-na/jam/querymanifest.cgi.
+
+httpd executes configdecrypt.
+
+httpd reads /data/runtime/cockpit/diskAnalysis.
+
+httpd writes diskAnalysis to /data/runtime/cockpit/diskAnalysis.
+
+httpd executes restartServer.pl.
+
+httpd reads /home/webserver/htdocs/dana-na/jam/querymanifest.cgi.bak.
+
+httpd writes querymanifest.cgi.bak to /home/webserver/htdocs/dana-na/jam/querymanifest.cgi.bak.
+
+httpd executes DSUserAgentCap.pm.
+
+httpd reads /home/webserver/htdocs/dana-na/jam/querymanifest.cgi.
+
+httpd writes querymanifest.cgi to /home/webserver/htdocs/dana-na/jam/querymanifest.cgi.
+
+Windows Attack Sequence:
+w3wp writes libaprhelper.so to C:\tmp\clientswrite.sock.
+
+w3wp reads C:\home\webserver\conf\ssl.key\secure.key.
+
+w3wp executes libaprhelper.so.
+
+w3wp connects to *.*.*.*.
+
+w3wp renames C:\tmp\tmpmnt\bin\tar to C:\tmp\tmpmnt\bin\tra.
+
+w3wp writes trojanized tar to C:\tmp\tmpmnt\bin\tar.
+
+w3wp executes C:\bin\samba_upgrade.tar.
+
+w3wp reads C:\proc\ive\mbserialnumber.
+
+w3wp writes plugin.jar to C:\home\runtime\SparkGateway\plugin.jar.
+
+w3wp executes libchilkat.so.
+
+w3wp reads C:\data\pkg\data-backup.tgz.
+
+w3wp writes malicious components to C:\data\pkg\data-backup.tgz.
+
+w3wp executes upgrade_monitor().
+
+w3wp reads C:\tmp\data\root\dev.
+
+w3wp writes malicious components to C:\tmp\data\root\samba_upgrade.tar.
+
+w3wp executes post-install script.
+
+w3wp reads C:\data\runtime\cockpit\mem.rd.
+
+w3wp executes memorysCounter.
+
+w3wp writes mem.rd to C:\data\runtime\cockpit\mem.rd.
+
+w3wp executes dsAgent.
+
+w3wp reads C:\data\runtime\cockpit\wd.fd.
+
+w3wp writes wd.lock to C:\data\runtime\cockpit\wd.lock.
+
+w3wp executes SparkPlugin.watchdog().
+
+w3wp reads C:\proc\self\maps.
+
+w3wp writes security.jar to C:\data\runtime\cockpit\security.jar.
+
+w3wp executes HandshakePlugin.
+
+w3wp reads C:\data\runtime\cockpit\gateway.conf.
+
+w3wp writes modified gateway.conf to C:\data\runtime\cockpit\gateway.conf.
+
+w3wp executes SparkGatewayFilter.
+
+w3wp reads C:\home\etc\manifest\exclusion_list.
+
+w3wp writes querymanifest.cgi to C:\home\webserver\htdocs\dana-na\jam\querymanifest.cgi.
+
+w3wp executes configdecrypt.
+
+w3wp reads C:\data\runtime\cockpit\diskAnalysis.
+
+w3wp writes diskAnalysis to C:\data\runtime\cockpit\diskAnalysis.
+
+w3wp executes restartServer.pl.
+
+w3wp reads C:\home\webserver\htdocs\dana-na\jam\querymanifest.cgi.bak.
+
+w3wp writes querymanifest.cgi.bak to C:\home\webserver\htdocs\dana-na\jam\querymanifest.cgi.bak.
+
+w3wp executes DSUserAgentCap.pm.
+
+w3wp reads C:\home\webserver\htdocs\dana-na\jam\querymanifest.cgi.
+
+w3wp writes querymanifest.cgi to C:\home\webserver\htdocs\dana-na\jam\querymanifest.cgi.
+
+Linux Attack Sequence:
+payload writes *.tar.gz
+
+payload reads *.conf
+
+bash executes bash
+
+payload connects *.*.*.*
+
+bash deletes *.log
+
+payload renames *.tar.gz
+
+payload executes ldapsearch
+
+bash creates cron job
+
+bash exports mailbox
+
+payload exfiltrates data to *.*.*.*
+
+Windows Attack Sequence:
+payload writes *.pst
+
+payload reads *.xml
+
+powershell.exe executes powershell.exe
+
+payload connects *.*.*.*
+
+powershell.exe deletes *.log
+
+payload renames *.pst
+
+sqlceip.exe executes AdFind.exe
+
+powershell.exe creates task
+
+powershell.exe exports mailbox
+
+payload exfiltrates data to *.*.*.*
+
+Linux Attack Sequence:
+wget write kernel
+
+chmod modify kernel
+
+mv rename kernel .kernel
+
+nohup execute .kernel
+
+.kernel connect *.*.*.*
+
+ping connect *.*.*.*
+
+wget write xaa, xab, xac, xad
+
+KEYPLUG.LINUX connect *.*.*.*
+
+KEYPLUG.LINUX read *.conf
+
+KEYPLUG.LINUX write *.log
+
+KEYPLUG.LINUX connect *.*.*.*
+
+Windows Attack Sequence:
+cmd.exe write kernel
+
+cmd.exe modify kernel
+
+cmd.exe rename kernel .kernel
+
+cmd.exe execute .kernel
+
+.kernel connect *.*.*.*
+
+ping connect *.*.*.*
+
+cmd.exe write xaa, xab, xac, xad
+
+KEYPLUG connect *.*.*.*
+
+KEYPLUG read *.conf
+
+KEYPLUG write *.log
+
+KEYPLUG connect *.*.*.*
+
+schtasks modify *\Microsoft\Windows\PLA\*
+
+HealthService.exe read *.dll
+
+DEADEYE write syslog_*.dat
+
+DEADEYE connect *.*.*.*
+
+LOWKEY.PASSIVE read *:*/USAHerds/Common/*.css
+
+BADPOTATO escalate privileges
+
+DUSTPAN create BEACON
+
+DEADEYE.EMBED write *.dll
+
+DEADEYE.APPEND write LOWKEY.PASSIVE
+
+
+Linux Attack Sequence:
+firefox writes *.pdf
+
+chrome writes *.pdf
+
+firefox reads *.pdf
+
+chrome reads *.pdf
+
+firefox executes *.iso
+
+chrome executes *.iso
+
+InternalViewer writes *.so
+
+ld.so executes *.so
+
+InternalViewer writes *.lnk
+
+bash executes *.lnk
+
+InternalViewer connects *.*.*.*
+
+ld.so connects *.*.*.*
+
+DBLL_Dropper writes *.elf
+
+bash executes *.elf
+
+DBLL_Dropper writes *.doc
+
+libreoffice reads *.doc
+
+libreoffice executes *.vba
+
+DBLL_Dropper writes *.dotm
+
+libreoffice reads *.dotm
+
+libreoffice executes *.dotm
+
+InternalViewer deletes *.pdf
+
+InternalViewer renames *.pdf
+
+DBLL_Dropper writes *.jpg
+
+DBLL_Dropper writes *.png
+
+libreoffice reads *.jpg
+
+libreoffice reads *.png
+
+libreoffice executes *.jpg
+
+libreoffice executes *.png
+
+DBLL_Dropper writes *.tar
+
+tar reads *.tar
+
+tar executes *.tar
+
+DBLL_Dropper writes *.gz
+
+gzip reads *.gz
+
+gzip executes *.gz
+
+DBLL_Dropper writes *.ko
+
+insmod reads *.ko
+
+insmod executes *.ko
+
+Windows Attack Sequence:
+firefox.exe writes *.pdf
+
+chrome.exe writes *.pdf
+
+firefox.exe reads *.pdf
+
+chrome.exe reads *.pdf
+
+firefox.exe executes *.iso
+
+chrome.exe executes *.iso
+
+InternalViewer.exe writes *.dll
+
+rundll32.exe executes *.dll
+
+InternalViewer.exe writes *.lnk
+
+explorer.exe executes *.lnk
+
+InternalViewer.exe connects *.*.*.*
+
+rundll32.exe connects *.*.*.*
+
+DBLL_Dropper.exe writes *.exe
+
+iexplore.exe executes *.exe
+
+Flash.exe executes *.exe
+
+DBLL_Dropper.exe writes *.doc
+
+winword.exe reads *.doc
+
+winword.exe executes *.vba
+
+DBLL_Dropper.exe writes *.dotm
+
+winword.exe reads *.dotm
+
+winword.exe executes *.dotm
+
+InternalViewer.exe deletes *.pdf
+
+InternalViewer.exe renames *.pdf
+
+DBLL_Dropper.exe writes *.jpg
+
+DBLL_Dropper.exe writes *.png
+
+winword.exe reads *.jpg
+
+winword.exe reads *.png
+
+winword.exe executes *.jpg
+
+winword.exe executes *.png
+
+DBLL_Dropper.exe writes *.rar
+
+winrar.exe reads *.rar
+
+winrar.exe executes *.rar
+
+DBLL_Dropper.exe writes *.zip
+
+winzip.exe reads *.zip
+
+winzip.exe executes *.zip
+
+DBLL_Dropper.exe writes *.sys
+
+services.exe reads *.sys
+
+services.exe executes *.sys
+
+Linux Attack Sequence:
+ssh connects *.*.*.*
+
+ssh executes bash
+
+*bash writes .vbs
+
+bash reads /etc/passwd
+
+bash executes wscript
+
+*wscript reads .vbs
+
+wscript writes /tmp/random_dir/domain.FQDN
+
+bash writes /etc/crontab
+
+bash executes nohup
+
+nohup executes GoldMax
+
+GoldMax connects *.*.*.*
+
+GoldMax reads /etc/shadow
+
+GoldMax writes /var/log/syslog
+
+bash deletes /tmp/random_dir/domain.FQDN
+
+*bash deletes .vbs
+
+Windows Attack Sequence:
+rdp connects *.*.*.*
+
+rdp executes powershell
+
+powershell writes C:\Users*\AppData\Local\Microsoft\Office365\PowerShell*.log
+
+powershell reads C:\Users*\AppData\Roaming\Microsoft\Protect*
+
+powershell executes mimikatz
+
+mimikatz writes C:\Users*\AppData\Local\Temp*.enc
+
+powershell executes Get-ADReplAccount
+
+Get-ADReplAccount reads Active Directory credentials
+
+powershell writes C:\Users*\AppData\Local\Microsoft\AzureAD\PowerShell*.log
+
+powershell executes AdFind
+
+AdFind reads Active Directory information
+
+powershell writes C:\Users*\AppData\Local\Microsoft\Teams\Shifts*.json
+
+powershell deletes C:\Users*\AppData\Local\Temp*.enc
+
+powershell deletes C:\Users*\AppData\Local\Microsoft\Office365\PowerShell*.log
+
+
+Linux Attack Sequence:
+payload write *.sh
+
+payload execute *.sh
+
+payload write CaddyWiper
+
+payload execute CaddyWiper
+
+payload write *.php
+
+payload execute *.php
+
+payload write GoGetter
+
+payload execute GoGetter
+
+payload write /etc/systemd/system/*.service
+
+payload execute /etc/systemd/system/*.service
+
+payload write /etc/cron.d/*
+
+payload execute /etc/cron.d/*
+
+payload connect *.*.*.*
+
+payload delete /var/log/*
+
+Windows Attack Sequence:
+payload write *.ps1
+
+payload execute *.ps1
+
+payload write CaddyWiper.exe
+
+payload execute CaddyWiper.exe
+
+payload write *.aspx
+
+payload execute *.aspx
+
+payload write GoGetter.exe
+
+payload execute GoGetter.exe
+
+payload write C:\Windows\System32*.service
+
+payload execute C:\Windows\System32*.service
+
+payload write C:\Windows\System32\Tasks*
+
+payload execute C:\Windows\System32\Tasks*
+
+payload connect *.*.*.*
+
+payload delete C:\Windows\Logs*
+
+
+
+Linux System:
+*bash writes .so
+
+*bash reads .txt
+
+bash connects to *.*.*.*
+
+*bash writes .jpg
+
+*bash reads .bin
+
+bash executes miniduke
+
+miniduke connects to *.*.*.*
+
+miniduke executes fatduke
+
+*fatduke reads .json
+
+fatduke connects to *.*.*.*
+
+*fatduke executes .sh
+
+*fatduke deletes .tmp
+
+*fatduke sends .tar.gz
+
+*python reads .enc
+
+*python reads .so
+
+*python executes .so
+
+python connects to dropbox.com
+
+*python writes .png
+
+*python writes .dat
+
+python executes miniduke
+
+
+Windows System:
+*rundll32.exe writes .dll
+
+*rundll32.exe reads .txt
+
+rundll32.exe connects to *.*.*.*
+
+*rundll32.exe writes .jpg
+
+*rundll32.exe reads .bin
+
+rundll32.exe executes miniduke.exe
+
+miniduke.exe connects to *.*.*.*
+
+miniduke.exe executes fatduke.exe
+
+*fatduke.exe reads .json
+
+fatduke.exe connects to *.*.*.*
+
+*fatduke.exe executes .ps1
+
+*fatduke.exe deletes .tmp
+
+*fatduke.exe sends .zip
+
+*wmic.exe reads .enc
+
+*wmic.exe reads .dll
+
+*wmic.exe executes .dll
+
+wmic.exe connects to dropbox.com
+
+*wmic.exe writes .png
+
+*wmic.exe writes .dat
+
+wmic.exe executes miniduke.exe
+
+
+Linux Attack Sequence:
+linkedin write *.rar
+
+file_manager read *.rar
+
+bash execute wmic
+
+wmic execute *.xsl
+
+wmic write *.dll
+
+certutil read *.dll
+
+certutil decode *.dll
+
+rundll32 execute *.dll
+
+payload connect *.*.*.*
+
+payload write *.pol
+
+payload read *.pol
+
+payload execute powershell.dll
+
+powershell.dll execute *.ps1
+
+payload delete *.dll
+
+payload rename *.dll
+
+payload write *.cav
+
+payload read *.cav
+
+payload execute *.cav
+
+payload connect *.*.*.*
+
+payload read *.rar
+
+Windows Attack Sequence:
+linkedin.exe write *.rar
+
+explorer.exe read *.rar
+
+cmd.exe execute wmic.exe
+
+wmic.exe execute *.xsl
+
+wmic.exe write *.dll
+
+certutil.exe read *.dll
+
+certutil.exe decode *.dll
+
+rundll32.exe execute *.dll
+
+payload.dll connect *.*.*.*
+
+payload.dll write *.pol
+
+payload.dll read *.pol
+
+payload.dll execute powershell.dll
+
+powershell.dll execute *.ps1
+
+payload.dll delete *.dll
+
+payload.dll rename *.dll
+
+payload.dll write *.cav
+
+payload.dll read *.cav
+
+payload.dll execute *.cav
+
+payload.dll connect *.*.*.*
+
+payload.dll read *.rar
+
+
+Linux Attack Sequence:
+SolarWinds.BusinessLayerHost writes SolarWinds.Orion.Core.BusinessLayer.so
+
+SolarWinds.BusinessLayerHost reads SolarWinds.Orion.Core.BusinessLayer.conf
+
+SolarWinds.BusinessLayerHost executes TEARDROP
+
+TEARDROP reads gracious_truth.jpg
+
+TEARDROP executes Cobalt Strike BEACON
+
+Cobalt Strike BEACON connects to *.*.*.*
+
+SolarWinds.BusinessLayerHost connects to *.*.*.*
+
+*SolarWinds.BusinessLayerHost deletes .tmp
+
+*SolarWinds.BusinessLayerHost renames .tmp
+
+*SolarWinds.BusinessLayerHost writes .log
+
+*SolarWinds.BusinessLayerHost reads .log
+
+*SolarWinds.BusinessLayerHost executes .bin
+
+*SolarWinds.BusinessLayerHost deletes .log
+
+*SolarWinds.BusinessLayerHost writes .so
+
+*SolarWinds.BusinessLayerHost reads .so
+
+SolarWinds.BusinessLayerHost connects to *.*.*.*
+
+*SolarWinds.BusinessLayerHost executes .so
+
+*SolarWinds.BusinessLayerHost deletes .so
+
+*SolarWinds.BusinessLayerHost writes .conf
+
+*SolarWinds.BusinessLayerHost reads .conf
+
+
+Windows Attack Sequence:
+SolarWinds.BusinessLayerHost writes SolarWinds.Orion.Core.BusinessLayer.dll
+
+SolarWinds.BusinessLayerHost reads SolarWinds.Orion.Core.BusinessLayer.dll.config
+
+SolarWinds.BusinessLayerHost executes TEARDROP
+
+TEARDROP reads gracious_truth.jpg
+
+TEARDROP executes Cobalt Strike BEACON
+
+Cobalt Strike BEACON connects to *.*.*.*
+
+SolarWinds.BusinessLayerHost connects to *.*.*.*
+
+*SolarWinds.BusinessLayerHost deletes .tmp
+
+*SolarWinds.BusinessLayerHost renames .tmp
+
+*SolarWinds.BusinessLayerHost writes .log
+
+*SolarWinds.BusinessLayerHost reads .log
+
+*SolarWinds.BusinessLayerHost executes .exe
+
+*SolarWinds.BusinessLayerHost deletes .log
+
+*SolarWinds.BusinessLayerHost writes .dll
+
+*SolarWinds.BusinessLayerHost reads .dll
+
+SolarWinds.BusinessLayerHost connects to *.*.*.*
+
+*SolarWinds.BusinessLayerHost executes .dll
+
+*SolarWinds.BusinessLayerHost deletes .dll
+
+*SolarWinds.BusinessLayerHost writes .config
+
+*SolarWinds.BusinessLayerHost reads .config
+
+
+Linux System:
+webshell.sh writes *.php.
+
+ransomware.sh writes *.elf.
+
+wiper.sh writes *.ko.
+
+mail_client.sh reads *.eml.
+
+system_tool.sh reads *.conf.
+
+ransomware.sh executes *.elf.
+
+wiper.sh executes *.elf.
+
+shell_script.sh executes *.sh.
+
+vpn_client.sh connects *.*.*.*.
+
+exfiltration_tool.sh connects *.*.*.*.
+
+ransomware.sh renames *.txt to *.enc.
+
+wiper.sh deletes ..
+
+Windows System:
+webshell.exe writes *.aspx.
+
+ransomware.exe writes *.exe.
+
+wiper.exe writes *.sys.
+
+exchange_client.exe reads *.eml.
+
+system_tool.exe reads *.hive.
+
+ransomware.exe executes *.exe.
+
+wiper.exe executes *.exe.
+
+batch_script.exe executes *.bat.
+
+vpn_client.exe connects *.*.*.*.
+
+exfiltration_tool.exe connects *.*.*.*.
+
+ransomware.exe renames *.txt to *.1ck.
+
+wiper.exe deletes ..
+
+
+Linux Attack Sequence:
+unitronics connects *.*.*.*
+
+unitronics reads /etc/unitronics/config/*.cfg
+
+unitronics writes /tmp/payload_*.sh
+
+unitronics executes /tmp/payload_*.sh
+
+payload clones unitronics
+
+payload renames /etc/unitronics/config/*.cfg to /etc/unitronics/config/*.cfg.bak
+
+payload deletes /etc/unitronics/config/*.cfg
+
+payload connects *.*.*.*
+
+Windows Attack Sequence:
+unitronics connects *.*.*.*
+
+unitronics reads C:\Program Files\Unitronics\config\*.ini
+
+unitronics writes C:\Windows\Temp\payload_*.exe
+
+unitronics executes C:\Windows\Temp\payload_*.exe
+
+payload clones unitronics
+
+payload renames C:\Program Files\Unitronics\config\*.ini to C:\Program Files\Unitronics\config\*.ini.bak
+
+payload deletes C:\Program Files\Unitronics\config\*.ini
+
+payload connects *.*.*.*
+
+Linux System:
+vpn_process writes /var/log/*.php
+
+vpn_process connects *.*.*.*
+
+vpn_process reads /var/log/*.log
+
+vpn_process executes exploit_process
+
+vpn_process renames /var/log/*.log
+
+vpn_process deletes /var/log/*.log
+
+Windows System:
+vpn_process writes C:\Program Files\Ivanti\*.php
+
+vpn_process connects *.*.*.*
+
+vpn_process reads C:\Program Files\Ivanti\*.log
+
+vpn_process executes exploit_process
+
+vpn_process renames C:\Program Files\Ivanti\*.log
+
+vpn_process deletes C:\Program Files\Ivanti\*.log
+
+
+Linux Attack Sequence:
+apache2 writes *.php
+
+apache2 writes *.sh
+
+bash executes *.sh
+
+bash reads /etc/passwd
+
+bash modifies /etc/network/interfaces
+
+bash connects *.*.*.*
+
+bash reads /var/www/*
+
+bash executes *.py
+
+bash deletes /tmp/*
+
+bash modifies /etc/*.conf
+
+Windows Attack Sequence:
+sqlservr.exe writes *.exe
+
+explorer.exe writes *.dll
+
+cmd.exe executes *.bat
+
+cmd.exe reads C:\Windows\System32\*.ini
+
+powershell.exe modifies C:\Windows\*.log
+
+iexplore.exe connects *.*.*.*
+
+explorer.exe reads C:\Program Files\*.conf
+
+svchost.exe executes *.vbs
+
+cmd.exe deletes C:\Windows\Temp\*
+
+regedit.exe modifies C:\Windows\System32\*.reg
+
+
+
+Linux Attack Sequence:
+libreoffice writes malicious .odt
+
+libreoffice reads malicious .odt
+
+libreoffice executes bash
+
+bash writes setup.tar.gz
+
+bash reads setup.tar.gz
+
+bash executes tar
+
+tar writes setup.tar.gz to /usr/lib
+
+bash deletes setup.tar.gz
+
+bash executes cliconfg
+
+cliconfg reads NTWDBLIB.so
+
+Windows Attack Sequence:
+winword.exe writes malicious .doc
+
+winword.exe reads malicious .doc
+
+winword.exe executes cmd.exe
+
+cmd.exe writes setup.cab
+
+cmd.exe reads setup.cab
+
+cmd.exe executes wusa.exe
+
+wusa.exe writes setup.cab to %SystemRoot%\system32
+
+cmd.exe deletes setup.cab
+
+cmd.exe executes cliconfg.exe
+
+cliconfg.exe reads NTWDBLIB.dll
+
+Linux System:
+apache2 writes /var/www/html/evaluatesiteupgrade.cs.aspx
+
+apache2 writes /var/www/html/Pickers.aspx
+
+apache2 writes /var/www/html/Error4.aspx
+
+apache2 executes /bin/bash
+
+bash reads /var/mail/*
+
+bash reads /var/lib/mysql/*
+
+bash reads /home/*/.bash_history
+
+bash connects to *.*.*.*
+
+bash executes /tmp/Mimikatz
+
+bash executes /tmp/Impacket
+
+bash executes /usr/bin/rdesktop
+
+bash writes /tmp/HealthMailbox55x2yq
+
+bash writes /tmp/disable-defender
+
+bash writes /tmp/GoXml
+
+bash writes /tmp/win.sh
+
+bash renames *.doc to *.ck
+
+bash deletes /tmp/*.exe
+
+bash deletes /var/log/*.log
+
+bash deletes /var/log/apache2/*.log
+
+bash executes /tmp/GoXml
+
+bash executes /tmp/cl
+
+Windows System:
+w3wp.exe writes C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\TEMPLATE\LAYOUTS\evaluatesiteupgrade.cs.aspx
+
+w3wp.exe writes C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\TEMPLATE\LAYOUTS\Pickers.aspx
+
+w3wp.exe writes C:\ProgramData\COM1\frontend\Error4.aspx
+
+w3wp.exe executes cmd.exe
+
+powershell.exe reads *.pst
+
+powershell.exe reads *.mdb
+
+powershell.exe reads *.csv
+
+powershell.exe connects to *.*.*.*
+
+cmd.exe executes Mimikatz.exe
+
+cmd.exe executes Impacket
+
+cmd.exe executes mstsc.exe
+
+powershell.exe writes C:\ProgramData\HealthMailbox55x2yq
+
+powershell.exe writes C:\ProgramData\disable-defender.exe
+
+powershell.exe writes C:\ProgramData\Microsoft\Windows\GoXml.exe
+
+powershell.exe writes C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\win.bat
+
+powershell.exe renames *.doc to *.ck
+
+cmd.exe deletes C:\ProgramData\*.exe
+
+cmd.exe deletes C:\Windows\System32\winevt\Logs\*.evtx
+
+cmd.exe deletes C:\ProgramData\*.log
+
+cmd.exe executes C:\ProgramData\Microsoft\Windows\GoXml.exe
+
+cmd.exe executes C:\ProgramData\Microsoft\Windows\cl.exe
+
+powershell.exe kills C:\Program Files\Windows Defender\MsMpEng.exe
+
+powershell.exe kills C:\Windows\System32\services.exe
+
+
+Linux Attack Sequence:
+*libreoffice writes .dotm
+
+*libreoffice reads .dotm
+
+*libreoffice executes .so
+
+bash connects to *.*.*.*
+
+*bash writes .desktop
+
+bash reads /etc/*.conf
+
+*bash executes .sh 
+
+Windows Attack Sequence:
+*winword.exe writes .dotm
+
+*winword.exe reads .dotm
+
+*winword.exe executes .dll
+
+rundll32.exe connects to *.*.*.*
+
+*rundll32.exe writes .lnk 
+
+rundll32.exe reads C:\Windows\System32\config*
+
+*rundll32.exe executes .exe
+
+
+Linux Attack Sequence:
+tomcat executes curl
+
+curl connects *.*.*.*
+
+payload executes LinPEAS
+
+payload writes linpeas.log
+
+payload reads linpeas.sh
+
+payload connects *.*.*.*
+
+payload writes change.m3
+
+payload executes rxxxxreverse proxy
+
+payload executes RustScan
+
+payload connects *.*.*.*
+
+payload writes naaNa.b
+
+payload executes naaNa.b
+
+payload writes llatZ
+
+payload executes llatZ
+
+payload writes RmaDc
+
+payload executes RmaDc
+
+payload writes mpbec
+
+payload executes mpbec
+
+payload connects *.*.*.*
+
+payload writes rsoCx.e
+
+payload executes rsoCx.e
+
+Windows Attack Sequence:
+*payload writes .exe
+
+*payload executes .exe
+
+payload writes change.m3
+
+payload connects *.*.*.*
+
+payload writes lockhuntersetup_3-4-3.exe
+
+payload executes lockhuntersetup_3-4-3.exe
+
+payload writes insomni a.exe
+
+payload executes insomni a.exe
+
+payload writes ok.exe
+
+payload executes ok.exe
+
+payload connects *.*.*.*
+
+*payload writes .exe
+
+*payload executes .exe
+
+payload connects *.*.*.*
+
+
+
+Linux System:
+thunderbird sends *.zip.
+
+firefox writes *.zip.
+
+unzip writes *.lnk.
+
+wine executes *.lnk.
+
+powershell reads *.lnk.
+
+powershell modifies *.lnk.
+
+powershell writes *.dat.
+
+powershell writes *.PDF.
+
+wine executes *.dat.
+
+beacon connects pandorasong[.]com.
+
+Windows System:
+outlook sends *.zip.
+
+explorer writes *.zip.
+
+explorer writes *.lnk.
+
+explorer executes *.lnk.
+
+powershell reads *.lnk.
+
+powershell modifies *.lnk.
+
+powershell writes *.dat.
+
+powershell writes *.PDF.
+
+rundll32 executes *.dat.
+
+beacon connects pandorasong[.]com.
+
+
+Linux:
+payload writes /tmp/*.exe
+
+payload reads /etc/*.conf
+
+payload executes /usr/bin/*
+
+payload connects *.*.*.*
+
+payload renames /tmp/*.exe
+
+payload deletes /tmp/*.exe
+
+Windows:
+payload writes C:\Users\*\AppData\Local\Temp\*.exe
+
+payload reads C:\ProgramData\*.ini
+
+payload executes C:\Windows\System32\*.exe
+
+payload connects *.*.*.*
+
+payload renames C:\Users\*\AppData\Local\Temp\*.exe
+
+payload deletes C:\Users\*\AppData\Local\Temp\*.exe
+
+
+Linux Attack Sequence:
+payload writes /tmp/*.tmp
+
+payload reads /etc/passwd
+
+payload clones bash
+
+payload executes /tmp/*.bin
+
+payload connects to *.*.*.*
+
+payload renames /tmp/*.tmp to /tmp/*.bin
+
+payload deletes /tmp/*.tmp
+
+Windows Attack Sequence:
+payload writes C:\Windows\Temp\*.tmp
+
+payload reads C:\Windows\System32\*.dll
+
+payload clones explorer.exe
+
+payload executes C:\Users\*\AppData\Local\Temp\*.exe
+
+payload connects to *.*.*.*
+
+payload renames C:\Windows\Temp\*.tmp to C:\Windows\Temp\*.exe
+
+payload deletes C:\Windows\Temp\*.tmp
+
+
+Linux Attack Sequence:
+erp writes /home/user/malicious_webshell.sh
+
+erp executes /home/user/encoded_script.sh
+
+erp writes /home/user/decoded_output.txt
+
+erp copies /home/user/decoded_output.txt to /var/www/html/*.jsp
+
+erp renames /var/www/html/decoded_output.txt to /var/www/html/webshell.jsp
+
+bash executes /home/user/encoded_script.sh
+
+erp connects to *.*.*.*
+
+erp reads /etc/hosts
+
+erp reads /usr/bin/reg
+
+erp executes MFSDLL
+
+erp reads mktzx64.so
+
+cron creates scheduled tasks
+
+bash executes /tmp/cc.sh
+
+bash executes ifconfig, netstat
+
+Windows Attack Sequence:
+erp.exe writes %UserProfile%\malicious_webshell.vbs
+
+erp.exe executes %UserProfile%\encoded_script.vbs
+
+erp.exe writes %UserProfile%\decoded_output.txt
+
+erp.exe copies %UserProfile%\decoded_output.txt to C:\inetpub\wwwroot*.jsp
+
+erp.exe renames C:\inetpub\wwwroot\decoded_output.txt to C:\inetpub\wwwroot\webshell.jsp
+
+wscript.exe executes %UserProfile%\encoded_script.vbs
+
+erp.exe connects to *.*.*.*
+
+erp.exe reads C:\Windows\System32\drivers\etc\hosts
+
+erp.exe reads HKLM\SYSTEM system.hiv
+
+erp.exe executes MFSDLL.exe
+
+erp.exe reads mktzx64.dll
+
+schtasks.exe creates scheduled tasks
+
+cmd.exe executes C:\Windows\Temp\cc.bat
+
+cscript.exe modifies WinRM configuration
+
+cmd.exe executes ipconfig, netstat
+
+
+Linux System:
+mail write *.pdf
+
+evince read *.pdf
+
+firefox write *.rar
+
+unrar write *.exe
+
+payload execute *
+
+payload connect *.*.*.*
+
+payload read /proc/*/status
+
+payload read /dev/input/*
+
+payload connect *.*.*.*
+
+Windows System:
+outlook write *.pdf
+
+acrobat read *.pdf
+
+chrome write *.rar
+
+winrar write *.exe
+
+payload execute *
+
+payload connect *.*.*.*
+
+payload read HKEY_LOCAL_MACHINE\SOFTWARE*
+
+payload read keystrokes
+
+payload connect *.*.*.*
+
+Linux:
+bash writes *.js
+
+bash executes *.sh
+
+bash writes *.elf
+
+bash writes *.so 
+
+bash connects to *.*.*.*
+
+bash executes *.sh
+
+bash modifies /etc/*.conf
+
+Windows:
+powershell.exe writes *.js
+
+powershell.exe executes *.ps1
+
+powershell.exe writes *.exe
+
+ctfmon.exe writes *.dll
+
+ctfmon.exe connects to *.*.*.*
+
+cmd.exe executes *.bat
+
+regedit.exe modifies HKEY_\
+
+
+Linux System:
+firefox writes /tmp/rmaserv, /tmp/winprint32, /tmp/mssqldbserv.xml.
+
+firefox executes /tmp/rmaserv.
+
+rmaserv executes /tmp/winprint32.
+
+winprint32 connects to *.*.*.*.
+
+winprint32 executes /tmp/mssqldbserv.xml.
+
+mssqldbserv.xml reads /home/*/Documents/*.doc, /home/*/Documents/*.xls.
+
+mssqldbserv.xml writes /tmp/kr.zp, /tmp/*.sft.
+
+winprint32 sendmsg /tmp/*.sft to *.*.*.*.
+
+firefox modifies clamav settings
+
+firefox reads /usr/bin/clamav, /usr/bin/rkhunter.
+
+Windows System:
+firefox.exe writes C:\DOCUME~1\<USER>~1\LOCALS~1\Temp\rmaserv.exe, C:\DOCUME~1\<USER>~1\LOCALS~1\Temp\winprint32.exe, C:\DOCUME~1\<USER>~1\LOCALS~1\Temp\mssqldbserv.xml.
+
+firefox.exe executes C:\DOCUME~1\<USER>~1\LOCALS~1\Temp\rmaserv.exe.
+
+rmaserv.exe executes C:\DOCUME~1\<USER>~1\LOCALS~1\Temp\winprint32.exe.
+
+winprint32.exe connects to *.*.*.*.
+
+winprint32.exe executes C:\DOCUME~1\<USER>~1\LOCALS~1\Temp\mssqldbserv.xml.
+
+mssqldbserv.xml reads C:\Users\*\Documents\*.doc, C:\Users\*\Documents\*.xls.
+
+mssqldbserv.xml writes C:\DOCUME~1\<USER>~1\LOCALS~1\Temp\kr.zp, C:\DOCUME~1\<USER>~1\LOCALS~1\Temp\*.sft.
+
+winprint32.exe sendmsg C:\DOCUME~1\<USER>~1\LOCALS~1\Temp\*.sft to *.*.*.*.
+
+firefox.exe modifies Windows Defender settings
+
+firefox.exe reads C:\Program Files\ESET\, C:\Program Files\BitDefender\.
+
+
+Linux Attack Sequence:
+PowerShell write avoslinux
+
+PowerShell connect *.*.*.*
+
+PowerShell execute avoslinux
+
+avoslinux read .avoslinux
+
+avoslinux write ransom note *.txt
+
+Windows Attack Sequence:
+wmiprvse.exe execute PowerShell
+
+PowerShell write psscriptpolicytest_k2rprfje.3f0.ps1
+
+PowerShell execute psscriptpolicytest_agajcpgp.pou.ps1
+
+PowerShell connect *.*.*.*
+
+PowerShell write vmware_kb.exe
+
+rundll32 execute minikatz
+
+scanner.exe write IIS_Temporary_Compressed_Files.zip
+
+wmic.exe modify administrative settings
+
+PowerShell create communication port localhost:32467
+
+PowerShell connect *.*.*.*
+
+scanner.exe write customer-name.exe
+
+customer-name.exe delete shadow copies
+
+customer-name.exe delete event logs
+
+customer-name.exe modify registry keys
+
+customer-name.exe write ransom note *.txt
+
+
+Linux System:
+ROADSWEEP writes *.txt
+
+ROADSWEEP reads /etc/*.conf
+
+ROADSWEEP executes encryption
+
+ROADSWEEP connects to *.*.*.*
+
+ROADSWEEP renames *.file to *.lck
+
+ROADSWEEP deletes /var/log/*.log
+
+CHIMNEYSWEEP writes *.docx
+
+CHIMNEYSWEEP reads /etc/passwd
+
+CHIMNEYSWEEP executes /bin/bash
+
+CHIMNEYSWEEP connects to *.*.*.*
+
+CHIMNEYSWEEP deletes /tmp/*.tmp
+
+ZEROCLEAR writes /dev/sd*
+
+ZEROCLEAR reads /sys/block/sd*/size
+
+ZEROCLEAR executes /usr/bin/dd
+
+Windows System:
+ROADSWEEP writes How_To_Unlock_MyFiles.txt
+
+ROADSWEEP reads C:\Windows\System32*.dll
+
+ROADSWEEP executes cmd.exe
+
+ROADSWEEP connects to *.*.*.*
+
+ROADSWEEP renames *.file to *.lck
+
+ROADSWEEP deletes C:\System Volume Information*.*
+
+CHIMNEYSWEEP writes *.docx
+
+CHIMNEYSWEEP reads HKEY_LOCAL_MACHINE\SOFTWARE*.*
+
+CHIMNEYSWEEP executes powershell.exe
+
+CHIMNEYSWEEP connects to *.*.*.*
+
+CHIMNEYSWEEP deletes C:\Users*\AppData\Local\Temp*.*
+
+ZEROCLEAR writes \.\PhysicalDrive*
+
+ZEROCLEAR reads C:\Windows\System32\drivers*.*
+
+ZEROCLEAR executes rwdsk.sys
+
+
+Linux Attack Sequence:
+bash write /tmp/httpd_watchdog.tar.gz
+
+bash write /tmp/firewall.d
+
+bash write /tmp/mips_ff
+
+bash delete /tmp/httpd_watchdog.tar.gz
+
+bash delete /tmp/firewall.d
+
+bash delete /tmp/mips_ff
+
+bash execute kv-mips
+
+kv-mips rename kworker/0:1
+
+kv-mips read /proc/*
+
+kv-mips write /tmp/*.elf
+
+kv-mips delete /tmp/*.elf
+
+kv-mips connect *.*.*.*
+
+kv-mips execute a.elf
+
+a.elf modify /proc/*
+
+a.elf delete /tmp/*.elf
+
+a.elf connect *.*.*.*
+
+a.elf execute cll_write_mips
+
+cll_write_mips write /tmp/*.elf
+
+cll_write_mips connect *.*.*.*
+
+cll_write_mips execute a.elf
+
+iptables read /etc/iptables/*
+
+iptables write /etc/iptables/*
+
+iptables connect *.*.*.*
+
+iptables execute a.elf
+
+Windows Attack Sequence:
+powershell write C:\Windows\Temp\httpd_watchdog.tar.gz
+
+powershell write C:\Windows\Temp\firewall.d
+
+powershell write C:\Windows\Temp\mips_ff
+
+powershell delete C:\Windows\Temp\httpd_watchdog.tar.gz
+
+powershell delete C:\Windows\Temp\firewall.d
+
+powershell delete C:\Windows\Temp\mips_ff
+
+powershell execute kv-mips.exe
+
+kv-mips.exe rename kworker/0:1
+
+kv-mips.exe read C:\Windows\System32\drivers\etc\hosts
+
+kv-mips.exe write C:\Windows\Temp\*.elf
+
+kv-mips.exe delete C:\Windows\Temp\*.elf
+
+kv-mips.exe connect *.*.*.*
+
+kv-mips.exe execute a.elf
+
+a.elf modify C:\Windows\System32\drivers\etc\hosts
+
+a.elf delete C:\Windows\Temp\*.elf
+
+a.elf connect *.*.*.*
+
+a.elf execute cll_write_mips.exe
+
+cll_write_mips.exe write C:\Windows\Temp\*.elf
+
+cll_write_mips.exe connect *.*.*.*
+
+cll_write_mips.exe execute a.elf
+
+netsh read C:\Windows\System32\drivers\etc\hosts
+
+netsh write C:\Windows\System32\drivers\etc\hosts
+
+netsh connect *.*.*.*
+
+netsh execute a.elf
+
+
+Linux:
+payload writes /home/*/writes/malicious_document.doc.
+
+payload executes /home/*/writes/malicious_document.doc.
+
+payload connects to *.*.*.*.
+
+payload writes /tmp/rising_sun.so.
+
+payload executes /tmp/rising_sun.so.
+
+rising_sun reads /etc/hostname, /etc/network/interfaces, and /proc/cpuinfo.
+
+rising_sun connects to *.*.*.*.
+
+Windows:
+payload.exe writes C:\Users\*\writes\malicious_document.doc.
+
+payload.exe executes C:\Users\*\writes\malicious_document.doc.
+
+payload.exe connects to *.*.*.*.
+
+payload.exe writes C:\Windows\Temp\rising_sun.dll.
+
+payload.exe executes C:\Windows\Temp\rising_sun.dll.
+
+rising_sun reads HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Hostname, HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\*\IPAddress, and HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\*.
+
+rising_sun connects to *.*.*.*.
+
+Linux Attack Sequence:
+perl writes sessionserver.pl
+
+perl executes mount command
+
+perl executes chmod command
+
+perl executes sessionserver.sh
+
+perl writes LIGHTWIRE web shell
+
+THINSPOOL writes LIGHTWIRE web shell
+
+THINSPOOL renames legitimate files
+
+LIGHTWIRE reads compcheckresult.cgi
+
+LIGHTWIRE executes arbitrary commands
+
+WIREFIRE reads /api/v1/cav/client/visits
+
+WARPWIRE reads plaintext credentials
+
+WARPWIRE connects to *.*.*.*
+
+ZIPLINE reads libsecure.so
+
+ZIPLINE writes /tmp/data/root/etc/ld.so.preload
+
+ZIPLINE writes /tmp/data/root/home/lib
+
+ZIPLINE deletes lines from /pkg/do-install
+
+ZIPLINE deletes lines from ./installer/do-install
+
+Windows Attack Sequence:
+perl writes sessionserver.pl
+
+perl executes mount
+
+perl executes chmod
+
+perl executes sessionserver.sh
+
+perl writes LIGHTWIRE web shell
+
+THINSPOOL writes LIGHTWIRE web shell
+
+THINSPOOL renames legitimate files
+
+LIGHTWIRE reads compcheckresult.cgi
+
+LIGHTWIRE executes arbitrary commands
+
+WIREFIRE reads /api/v1/cav/client/visits
+
+WARPWIRE reads plaintext credentials
+
+WARPWIRE connects to *.*.*.*
+
+ZIPLINE reads libsecure.so
+
+ZIPLINE writes C:\tmp\data\root\etc\ld.so.preload
+
+ZIPLINE writes C:\tmp\data\root\home\lib
+
+ZIPLINE deletes lines from C:\pkg\do-install
+
+ZIPLINE deletes lines from C:\installer\do-install
+
+Linux Attack Sequence:
+pikabot writes *.so
+
+pikabot reads *.conf
+
+pikabot executes *.bin
+
+pikabot connects *.*.*.*
+
+pikabot executes bash
+
+pikabot reads /etc/passwd
+
+pikabot sends data to *.*.*.*
+
+pikabot executes /bin/bash
+
+pikabot writes /etc/rc.local
+
+pikabot deletes *.conf
+
+Windows Attack Sequence:
+pikabot.exe writes *.dll
+
+pikabot.exe reads *.ini
+
+pikabot.exe executes *.exe
+
+pikabot.exe connects *.*.*.*
+
+pikabot.exe executes into explorer.exe
+
+pikabot.exe reads system_info.txt
+
+pikabot.exe sends data to *.*.*.*
+
+pikabot.exe executes cmd.exe
+
+pikabot.exe writes registry_key.reg
+
+pikabot.exe deletes *.ini
+
+
+Linux:
+payload writes /tmp/malicious_file
+
+payload reads /tmp/malicious_file
+
+payload connects to *.*.*.*
+
+payload deletes /tmp/malicious_file
+
+payload renames /tmp/malicious_file to /tmp/renamed_file
+
+payload writes /etc/config_file
+
+payload reads /etc/config_file
+
+payload executes /bin/system_process
+
+payload connects to malicious_domain.com
+
+payload writes /var/log/system_file
+
+payload reads /var/log/system_file
+
+payload executes /tmp/malicious_script.sh
+
+payload writes /var/log/log_file.log
+
+payload reads /var/log/log_file.log
+
+Windows:
+payload writes C:\Temp\malicious_file.exe
+
+payload reads C:\Temp\malicious_file.exe
+
+payload connects to *.*.*.*
+
+payload deletes C:\Temp\malicious_file.exe
+
+payload renames C:\Temp\malicious_file.exe to C:\Temp\renamed_file.exe
+
+payload writes C:\Windows\System32\config_file.ini
+
+payload reads C:\Windows\System32\config_file.ini
+
+payload executes C:\Windows\System32\system_process.exe
+
+payload connects to malicious_domain.com
+
+payload writes C:\Windows\System32\system_file.dll
+
+payload reads C:\Windows\System32\system_file.dll
+
+payload executes C:\Temp\malicious_script.ps1
+
+payload writes C:\Windows\System32\log_file.log
+
+payload reads C:\Windows\System32\log_file.log
+
+
+Linux System:
+thunderbird write *.doc
+
+libreoffice read *.zip
+
+libreoffice execute *.exe
+
+crimsonrat connect *.*.*.*
+
+crimsonrat read /home//
+
+crimsonrat execute keylogger
+
+crimsonrat execute usb_module
+
+crimsonrat read /dev/fb0
+
+crimsonrat write /tmp/*.png
+
+crimsonrat read /var/log/*.log
+
+crimsonrat write *.*.*.*
+
+crimsonrat read /etc/*
+
+crimsonrat write *.*.*.*
+
+crimsonrat execute /bin/*
+
+crimsonrat write /tmp/*.txt
+
+crimsonrat read /home//
+
+crimsonrat write *.*.*.*
+
+crimsonrat read /dev/sd*
+
+crimsonrat read /tmp/*.bin
+
+crimsonrat write /tmp/*.bin
+
+crimsonrat read /tmp/*.bin
+
+crimsonrat write /tmp/*.bin
+
+crimsonrat delete /home//
+
+Windows System:
+outlook write *.doc
+
+winword read *.zip
+
+winword execute *.exe
+
+crimsonrat connect *.*.*.*
+
+crimsonrat read C:\Users**
+
+crimsonrat execute keylogger.exe
+
+crimsonrat execute usb_module.exe
+
+crimsonrat read C:\Windows\System32*
+
+crimsonrat write C:\Users**.png
+
+crimsonrat read C:\Users**.log
+
+crimsonrat write *.*.*.*
+
+crimsonrat read C:\Windows\System32*
+
+crimsonrat write *.*.*.*
+
+crimsonrat execute C:\Windows\System32\cmd.exe
+
+crimsonrat write C:\Users**.txt
+
+crimsonrat read C:\Users**
+
+crimsonrat write *.*.*.*
+
+crimsonrat read C:*
+
+crimsonrat read C:\Users**.bin
+
+crimsonrat write C:\Users**.bin
+
+crimsonrat read C:\Users**.bin
+
+crimsonrat write C:\Users**.bin
+
+crimsonrat delete C:\Users**
+
+
+Linux Attack Sequence:
+cryptcat writes *.sh
+
+ssh reads /etc/*
+
+plink executes *.elf
+
+netcat connects *.*.*.*
+
+custom_backdoor renames *.conf
+
+bash deletes /tmp/*
+
+systemd modifies /var/log/*
+
+cron creates /etc/cron.d/*
+
+sshd uses /usr/bin/plink
+
+cryptcat uses /usr/bin/cryptcat
+
+Windows Attack Sequence:
+KB77846376.exe writes *.exe
+
+NetExec.exe reads C:\Windows\System32\*
+
+cryptcat.exe executes *.exe
+
+Sechack.exe connects *.*.*.*
+
+PLINK.exe renames *.exe
+
+RDP.exe deletes *.exe
+
+powershell.exe modifies C:\Windows\System32\*
+
+svchost.exe creates C:\Windows\Tasks\*.xml
+
+explorer.exe uses C:\Windows\System32\PLINK.exe
+
+cryptcat.exe uses C:\Windows\System32\cryptcat.exe
+
+
+
+
+Linux Environment:
+payload write /tmp/cryptcat_*
+
+payload execute /tmp/cryptcat_*
+
+payload write /tmp/WMImplant_*
+
+payload execute /tmp/WMImplant_*
+
+payload connect *.*.*.*
+
+payload write /tmp/metasploit_*
+
+payload execute /tmp/metasploit_*
+
+payload write /tmp/cobaltstrike_*
+
+payload execute /tmp/cobaltstrike_*
+
+payload write /tmp/powersploit_*
+
+payload execute /tmp/powersploit_*
+
+payload write /tmp/CATRUNNER_*.xml
+
+payload execute /tmp/CATRUNNER_*.xml
+
+Windows Environment:
+payload write C:\Windows\Temp\cryptcat_*
+
+payload execute C:\Windows\Temp\cryptcat_*
+
+payload write C:\Windows\Temp\WMImplant_*
+
+payload execute C:\Windows\Temp\WMImplant_*
+
+payload connect *.*.*.*
+
+payload write C:\Windows\Temp\metasploit_*
+
+payload execute C:\Windows\Temp\metasploit_*
+
+payload write C:\Windows\Temp\cobaltstrike_*
+
+payload execute C:\Windows\Temp\cobaltstrike_*
+
+payload write C:\Windows\Temp\powersploit_*
+
+payload execute C:\Windows\Temp\powersploit_*
+
+payload write C:\Windows\Temp\CATRUNNER_*.xml
+
+payload execute C:\Windows\Temp\CATRUNNER_*.xml
+
+
+
+Linux Attack Sequence:
+ANDROMEDA writes TrustedInstaller
+
+ANDROMEDA writes mskmde
+
+ANDROMEDA executes TrustedInstaller
+
+ANDROMEDA connects to *.*.*.*
+
+wuauclt writes 0171ef74
+
+wuauclt executes 0171ef74
+
+0171ef74 writes xpexplore.js
+
+0171ef74 executes xpexplore.js
+
+wuauclt writes QUIETCANARY
+
+wuauclt executes QUIETCANARY
+
+QUIETCANARY connects to *.*.*.*
+
+QUIETCANARY writes win_rec.tar
+
+QUIETCANARY writes win_files.tar
+
+QUIETCANARY writes win_txt.tar
+
+QUIETCANARY reads /home/*/
+
+QUIETCANARY reads /mnt/*/
+
+QUIETCANARY reads .tar to *.*.*.**
+
+Windows Attack Sequence:
+ANDROMEDA writes TrustedInstaller.exe
+
+ANDROMEDA writes mskmde.com
+
+ANDROMEDA executes TrustedInstaller.exe
+
+ANDROMEDA connects to *.*.*.*
+
+wuauclt writes 0171ef74.exe
+
+wuauclt executes 0171ef74.exe
+
+0171ef74 writes xpexplore.js
+
+0171ef74 executes xpexplore.js
+
+wuauclt writes QUIETCANARY.exe
+
+wuauclt executes QUIETCANARY.exe
+
+QUIETCANARY connects to *.*.*.*
+
+QUIETCANARY writes win_rec.rar
+
+QUIETCANARY writes win_files.rar
+
+QUIETCANARY writes win_txt.rar
+
+QUIETCANARY reads c:\users*
+
+QUIETCANARY reads d:*
+
+QUIETCANARY reads .rar to *.*.*.**
+
+
+Windows Environment
+outlook.exe writes *.doc
+
+outlook.exe writes *.xls
+
+winword.exe reads *.doc
+
+excel.exe reads *.xls
+
+winword.exe executes vba_macro.exe
+
+excel.exe executes vba_macro.exe
+
+vba_macro.exe writes fontcache.dat
+
+vba_macro.exe executes fontcache.dat
+
+svchost.exe connects *.*.*.*
+
+svchost.exe writes *.dll
+
+svchost.exe executes *.dll
+
+psexec.exe connects *.*.*.*
+
+psexec.exe executes *.exe
+
+*.exe writes killdisk.exe
+
+*.exe executes killdisk.exe
+
+killdisk.exe deletes *.sys
+
+Linux Environment
+thunderbird writes *.doc
+
+thunderbird writes *.xls
+
+libreoffice reads *.doc
+
+libreoffice reads *.xls
+
+libreoffice executes vba_macro.sh
+
+libreoffice executes vba_macro.sh
+
+vba_macro writes fontcache.so
+
+vba_macro executes fontcache.so
+
+systemd connects *.*.*.*
+
+systemd writes *.so
+
+systemd executes *.so
+
+ssh connects *.*.*.*
+
+ssh executes *.sh
+
+*.sh writes killdisk.sh
+
+*.sh executes killdisk.sh
+
+killdisk.sh deletes *.sys
+
+
+Linux System:
+
+payload writes SUGARUSH
+
+payload writes SUGARDUMP
+
+payload reads /home/*/.config/google-chrome/Default/Login Data
+
+payload executes SUGARUSH
+
+payload connects to *.*.*.*
+
+payload writes /var/www/html/fake_login.html
+
+payload reads /home/*/writes/scraped_content.zip
+
+payload executes SUGARDUMP
+
+payload writes /home/*/writes/fake_job_offer.xls
+
+payload writes /home/*/writes/fake_commercial.mp4
+
+payload reads /home/*/.config/google-chrome/Default/History
+
+payload writes /tmp/CrashLog.txt
+
+payload sends /tmp/CrashLog.txt
+
+payload sends /tmp/CrashLog.txt
+
+payload writes /etc/cron.d/malicious_task
+
+payload executes /etc/cron.d/malicious_task
+
+Windows System:
+payload writes C:\Users*\AppData\Roaming\SUGARUSH.exe
+
+payload writes C:\Users*\AppData\Roaming\SUGARDUMP.exe
+
+payload reads C:\Users*\AppData\Local\Google\Chrome\User Data\Default\Login Data
+
+payload executes C:\Users*\AppData\Roaming\SUGARUSH.exe
+
+payload connects to *.*.*.*
+
+payload writes C:\inetpub\wwwroot\fake_login.html
+
+payload reads C:\Users*\writes\scraped_content.zip
+
+payload executes C:\Users*\AppData\Roaming\SUGARDUMP.exe
+
+payload writes C:\Users*\writes\fake_job_offer.xls
+
+payload writes C:\Users*\writes\fake_commercial.mp4
+
+payload reads C:\Users*\AppData\Local\Google\Chrome\User Data\Default\History
+
+payload writes C:\Users*\AppData\Local\Temp\CrashLog.txt
+
+payload sends C:\Users*\AppData\Local\Temp\CrashLog.txt via email
+
+payload sends C:\Users*\AppData\Local\Temp\CrashLog.txt via HTTP
+
+payload writes C:\Windows\System32\Tasks\malicious_task
+
+payload executes C:\Windows\System32\Tasks\malicious_task
+
